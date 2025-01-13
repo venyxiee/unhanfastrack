@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bimbingan Belajar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img src="UNHAN_FIX.png" alt="Logo Bimbingan Belajar" class="logo">
+        <h1>FAST TRACK PMB UNHAN S1 2025</h1>
+        <p class="motto">"Ilmu adalah investasi terbaik untuk masa depan"</p>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav>
+        <ul class="tabs">
+            <li class="tab active" onclick="showTab('form')">PENDAFTARAN</li>
+            <li class="tab" onclick="showTab('jadwal')">JADWAL BIMBINGAN</li>
+            <li class="tab" onclick="showTab('pengajar')">TIM PENGAJAR</li>
+        </ul>
+    </nav>
+
+    <!-- Konten Halaman -->
+    <div id="content">
+        <!-- Formulir Pendaftaran -->
+        <section id="form" class="tab-content active">
+            <h2>PENDAFTARAN</h2>
+
+            <div class="info-section">
+                <p>Selamat datang di halaman pendaftaran program bimbingan belajar <strong>FAST TRACK PMB UNHAN S1 2025</strong>.</p>
+                <p>Kami menyediakan bimbingan untuk TPS, Psikotes, dan TKBI dengan tutor berpengalaman serta jadwal fleksibel. Biaya mulai dari <strong>Rp350.000/bulan</strong>.</p>
+                <p>Harap siapkan bukti pembayaran sebelum melakukan pendaftaran. Format bukti pembayaran yang diterima adalah <strong>.jpeg, .jpg, .png, .pdf</strong>.</p>
+            </div>
+            
+            <form id="registrationForm">
+                <label for="name">Nama Lengkap:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="phone">Nomor WhatsApp:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="program">Pilih Program:</label>
+                <select id="program" name="program" required>
+                    <option value="TPS">TPS</option>
+                    <option value="PSIKOTES">PSIKOTES</option>
+                    <option value="TKBI">TKBI</option>
+                </select>
+
+                <label for="payment-proof">Bukti Pembayaran (.jpeg .jpg .png .pdf):</label>
+                <input type="file" id="payment-proof" name="payment-proof" accept=".jpeg,.jpg,.png,.pdf" required>
+                
+                <button type="submit">Daftar Sekarang</button>
+            </form>
+        </section>
+
+        <!-- Jadwal Bimbingan -->
+        <section id="jadwal" class="tab-content">
+            <h2>JADWAL BIMBINGAN</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Hari</th>
+                        <th>Waktu</th>
+                        <th>Program</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Senin</td>
+                        <td>09:00 - 11:00</td>
+                        <td>TPS</td>
+                    </tr>
+                    <tr>
+                        <td>Rabu</td>
+                        <td>14:00 - 16:00</td>
+                        <td>PSIKOTES</td>
+                    </tr>
+                    <tr>
+                        <td>Jumat</td>
+                        <td>19:00 - 21:00</td>
+                        <td>TKBI</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Tim Pengajar -->
+        <section id="pengajar" class="tab-content">
+            <h2>TIM PENGAJAR</h2>
+            <div id="teacher-info">
+                <button id="prev-teacher">&#9664;</button>
+                <div id="teacher-details">
+                    <img id="teacher-photo" src="" alt="Foto Pengajar">
+                    <h3 id="teacher-name"></h3>
+                    <ul>
+                        <li><strong>Prodi:</strong> <span id="teacher-prodi"></span></li>
+                        <li><strong>Umur:</strong> <span id="teacher-umur"></span></li>
+                        <li><strong>Asal SMA:</strong> <span id="teacher-asal"></span></li>
+                        <li><strong>Prestasi:</strong> <span id="teacher-prestasi"></span></li>
+                        <li><strong>IPK:</strong> <span id="teacher-ipk"></span></li>
+                        <li><strong>Semester:</strong> <span id="teacher-semester"></span></li>
+
+                    </ul>
+                </div>
+                <button id="next-teacher">&#9654;</button>
+            </div>
+            
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Bimbingan Belajar</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
