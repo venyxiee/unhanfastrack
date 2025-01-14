@@ -30,9 +30,19 @@
             <h2>PENDAFTARAN</h2>
 
             <div class="info-section">
-                <p>Selamat datang di halaman pendaftaran program bimbingan belajar <strong>FAST TRACK PMB UNHAN S1 2025</strong>.</p>
-                <p>Kami menyediakan bimbingan untuk TPS, Psikotes, dan TKBI dengan tutor berpengalaman serta jadwal fleksibel. Biaya mulai dari <strong>Rp350.000/bulan</strong>.</p>
-                <p>Harap siapkan bukti pembayaran sebelum melakukan pendaftaran. Format bukti pembayaran yang diterima adalah <strong>.jpeg, .jpg, .png, .pdf</strong>.</p>
+                <p><strong>Siap-siap sukses di PMB UNHAN S1 2025! 🎯.</strong></p>
+                <p>Bergabunglah dengan program bimbingan <strong>FAST TRACK PMB UNHAN S1 2025</strong> yang siap membantu kamu.</p>
+                <p>mempersiapkan ujian dengan cara yang efektif dan menyenangkan! Kami menawarkan bimbingan Psikotest secara intensif dan lengkap dengan tutor berpengalaman yang siap memberikan tips dan trik terbaik.</p>
+                <p>Dengan jadwal yang fleksibel, kamu bisa belajar tanpa mengganggu aktivitas lainnya. Hanya dengan <del>Rp500.000</del> <strong>Rp400.000/bulan</strong>, kamu sudah mendapatkan bimbingan yang terjamin kualitasnya.</p>
+
+                <!-- Bagian Nomor Rekening dan Nama -->
+                <div class="account-info">
+                    <p><strong>No Rekening Bank BRI :</strong> <span class="highlight">011301111117503</span></p>
+                    <p><strong>A.N. EIKEL PERANGIN-ANGIN</strong></p>
+                </div>
+
+                <p>Tunggu apa lagi! Siapkan bukti pembayaran dan daftar sekarang juga untuk meraih kesuksesanmu di <strong>PMB UNHAN S1 2025!</strong></p>
+
             </div>
             
             <form id="registrationForm">
@@ -44,13 +54,6 @@
                 
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
-                
-                <label for="program">Pilih Program:</label>
-                <select id="program" name="program" required>
-                    <option value="TPS">TPS</option>
-                    <option value="PSIKOTES">PSIKOTES</option>
-                    <option value="TKBI">TKBI</option>
-                </select>
 
                 <label for="payment-proof">Bukti Pembayaran (.jpeg .jpg .png .pdf):</label>
                 <input type="file" id="payment-proof" name="payment-proof" accept=".jpeg,.jpg,.png,.pdf" required>
@@ -60,35 +63,34 @@
         </section>
 
         <!-- Jadwal Bimbingan -->
+        <!-- Jadwal Bimbingan -->
         <section id="jadwal" class="tab-content">
             <h2>JADWAL BIMBINGAN</h2>
             <table>
+                <caption>Jadwal Bimbingan untuk Program FAST TRACK</caption>
                 <thead>
                     <tr>
                         <th>Hari</th>
                         <th>Waktu</th>
-                        <th>Program</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>Senin</td>
-                        <td>09:00 - 11:00</td>
-                        <td>TPS</td>
+                        <td>20:00 - 21:00</td>
                     </tr>
                     <tr>
                         <td>Rabu</td>
-                        <td>14:00 - 16:00</td>
-                        <td>PSIKOTES</td>
+                        <td>20:00 - 21:00</td>
                     </tr>
                     <tr>
                         <td>Jumat</td>
-                        <td>19:00 - 21:00</td>
-                        <td>TKBI</td>
+                        <td>19:00 - 20:00</td>
                     </tr>
                 </tbody>
             </table>
         </section>
+
 
         <!-- Tim Pengajar -->
         <section id="pengajar" class="tab-content">
@@ -101,10 +103,9 @@
                     <ul>
                         <li><strong>Prodi:</strong> <span id="teacher-prodi"></span></li>
                         <li><strong>Umur:</strong> <span id="teacher-umur"></span></li>
-                        <li><strong>Asal SMA:</strong> <span id="teacher-asal"></span></li>
-                        <li><strong>Prestasi:</strong> <span id="teacher-prestasi"></span></li>
-                        <li><strong>IPK:</strong> <span id="teacher-ipk"></span></li>
+                        <li><strong>Asal:</strong> <span id="teacher-asal"></span></li>
                         <li><strong>Semester:</strong> <span id="teacher-semester"></span></li>
+                        <li><strong>No-Wa:</strong> <span id="teacher-wa"></span></li>
 
                     </ul>
                 </div>
@@ -115,9 +116,21 @@
     </div>
 
     <!-- Footer -->
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Bimbingan Belajar</p>
+        <div class="footer-container">
+            <!-- Tombol Chat CS -->
+            <div class="chat-container">
+                <p>Masih ragu dan punya pertanyaan?</p>
+                <a href="https://wa.me/6281909150803" class="chat-btn">
+                    <span>WA chat</span>
+                </a>
+            </div>
+            <!-- Copyright -->
+            <p class="copyright">Copyright © UNHAN FASTRACK 2025</p>
+        </div>
     </footer>
+
 
     <script src="script.js"></script>
 </body>

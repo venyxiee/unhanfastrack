@@ -21,10 +21,10 @@ app.get('/', (req, res) => {
 
 // Endpoint untuk menerima data pendaftaran
 app.post('/register', (req, res) => {
-    const { name, phone, email, program } = req.body;
+    const { name, phone, email } = req.body;
 
     // Validasi data
-    if (!name || !phone || !email || !program) {
+    if (!name || !phone || !email ) {
         return res.status(400).json({ message: 'Data tidak lengkap!' });
     }
 
@@ -48,7 +48,7 @@ app.post('/register', (req, res) => {
     }
 
     // Tambahkan data baru
-    const newRegistration = { name, phone, email, program };
+    const newRegistration = { name, phone, email };
     registrations.push(newRegistration);
 
     // Simpan data ke file

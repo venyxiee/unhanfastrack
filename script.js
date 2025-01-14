@@ -11,7 +11,6 @@ document.getElementById("registrationForm").addEventListener("submit", async fun
     const name = document.getElementById("name").value.trim();
     const phone = document.getElementById("phone").value.trim();
     const email = document.getElementById("email").value.trim();
-    const program = document.getElementById("program").value;
     const paymentProof = document.getElementById("payment-proof").files[0]; // Ambil file bukti pembayaran
 
     // Validasi data input
@@ -21,7 +20,7 @@ document.getElementById("registrationForm").addEventListener("submit", async fun
     }
 
     // Gabungkan data ke string untuk pengecekan unik
-    const uniqueKey = `${name}-${phone}-${email}-${program}`;
+    const uniqueKey = `${name}-${phone}-${email}`;
 
     // Ambil daftar pendaftar dari Local Storage
     let registrants = JSON.parse(localStorage.getItem("registrants")) || [];
@@ -46,7 +45,6 @@ Urutan ke: ${totalRegistrants}
 Nama: ${name}
 No WhatsApp: ${phone}
 Email: ${email}
-Program: ${program}
     `;
     try {
         await fetch(sendMessageURL, {
@@ -92,7 +90,6 @@ Program: ${program}
                 name: name,
                 phone: phone,
                 email: email,
-                program: program,
             }),
         });
         console.log("Data berhasil disimpan di server backend.");
@@ -128,34 +125,31 @@ function showTab(tabId) {
 let currentTeacherIndex = 0;
 const teachers = [
     {
-        name: "SMDK EIKEL K PARANGIN-ANGIN",
-        photo: "images/ekel.jpg",
+        name: "SMDK EIKEL K PERANGIN-ANGIN",
+        photo: "images/ekel1.jpg",
         prodi: "Teknik Mesin",
         umur: "20 Tahun",
-        asal: "SMAN 2 Balige",
-        prestasi: "",
-        ipk: "3.80",
+        asal: "Sumatera Utara",
         semester: "5",
+        nowa: "081265167017",
     },
     {
         name: "SMDK MICHAEL FALDO",
-        photo: "images/faldo.jpg",
+        photo: "images/faldo1.jpg",
         prodi: "Teknik Elektro",
         umur: "20 Tahun",
-        asal: "SMAN 2 Balige",
-        prestasi: "Juara 1 Lomba Coding Nasional",
-        ipk: "3.80",
+        asal: "Tangerang",
         semester: "5",
+        nowa: "081211367521",
     },
     {
-        name: "SMDK IMANNUEL SIMANJUNTAK",
-        photo: "images/iman.jpg",
+        name: "SMDK IMMANUEL SIMANJUNTAK",
+        photo: "images/iman1.jpg",
         prodi: "Teknik Mesin",
-        umur: "20 Tahun",
-        asal: "SMAN 2 Balige",
-        prestasi: "Publikasi Jurnal IEEE",
-        ipk: "3.80",
+        umur: "21 Tahun",
+        asal: "Sumatera Utara",
         semester: "5",
+        nowa: "081909150803",
     },
 ];
 
@@ -169,9 +163,8 @@ function updateTeacher() {
     document.getElementById("teacher-photo").alt = `Foto ${teacher.name}`;
     document.getElementById("teacher-prodi").textContent = teacher.prodi;
     document.getElementById("teacher-umur").textContent = teacher.umur;
+    document.getElementById("teacher-wa").textContent = teacher.nowa;
     document.getElementById("teacher-asal").textContent = teacher.asal;
-    document.getElementById("teacher-prestasi").textContent = teacher.prestasi || "Tidak ada";
-    document.getElementById("teacher-ipk").textContent = teacher.ipk;
     document.getElementById("teacher-semester").textContent = teacher.semester;
 }
 
